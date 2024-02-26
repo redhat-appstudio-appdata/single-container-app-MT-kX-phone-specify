@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: single-container-app
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/mkosiarc-tenant/single-container-app/single-container-app@sha256:771caad0948bab9ad807d76e3a278b44791c574f9aea75ec4b04b82e958d3ea7
+        name: my-single-container
+        resources: {}
+status: {}
